@@ -1,0 +1,53 @@
+[
+  {
+    "desc": "herbivore animals",
+    "statements": [
+      {
+        "field": "type",
+        "operator": "IN_LIST",
+        "list": [
+          "herbivore"
+        ]
+      }
+    ]
+  },
+  {
+    "desc": "herbivore or carnivore animals which are small",
+    "statements": [
+      {
+        "field": "type",
+        "operator": "IN_LIST",
+        "list": [
+          "herbivore",
+          "carnivore"
+        ]
+      },
+      {
+        "field": "height",
+        "operator": "IN_LIST",
+        "list": [
+          "small"
+        ]
+      }
+    ]
+  },
+  {
+    "desc": "omnivore animals which are not tall",
+    "statements": [
+      {
+        "field": "type",
+        "operator": "IN_LIST",
+        "list": [
+          "omnivore"
+        ]
+      },
+      {
+        "field": "height",
+        "operator": "NOT_IN_LIST",
+        "list": [
+          "tall"
+        ]
+      }
+    ]
+  }
+]
