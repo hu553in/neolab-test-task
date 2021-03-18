@@ -29,7 +29,7 @@ public class App {
             ));
             rules.forEach(rule -> {
                 var counter = new AtomicInteger(0);
-                var statements = rule.getStatements();
+                final var statements = rule.getStatements();
                 entities.forEach(entity -> {
                     if (statements.stream().allMatch(statement ->
                         statement.getOperator().run(
