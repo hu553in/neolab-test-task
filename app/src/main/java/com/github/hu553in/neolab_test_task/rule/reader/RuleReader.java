@@ -24,11 +24,11 @@ public class RuleReader {
                     }
             );
         } catch (JsonParseException e) {
-            throw new RuleReaderException("Unable to parse rules", e);
+            throw new RuleReaderException("Unable to parse rule JSON", e);
         } catch (JsonMappingException e) {
-            throw new RuleReaderException("Unable to map rules", e);
+            throw new RuleReaderException("Unable to map rule JSON", e);
         } catch (IOException e) {
-            throw new RuleReaderException("Unable to read rules", e);
+            throw new RuleReaderException("Unable to read rules from file", e);
         }
     }
 }
