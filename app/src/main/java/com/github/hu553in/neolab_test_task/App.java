@@ -16,7 +16,7 @@ public class App {
         try {
             if (args.length < 2) {
                 throw new IllegalArgumentException(
-                        "Invalid CLI args (expected: <entities_path>, <rules_path>)"
+                        "Invalid CLI args (expected: <entities_path> <rules_path>)"
                 );
             }
             final var entities = EntityReader.read(Paths.get(args[0]));
