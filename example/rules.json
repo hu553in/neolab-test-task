@@ -1,7 +1,7 @@
 [
   {
     "desc": "herbivore animals",
-    "statements": [
+    "stringListStatements": [
       {
         "field": "type",
         "operator": "IN_LIST",
@@ -13,7 +13,7 @@
   },
   {
     "desc": "herbivore or carnivore animals which are small",
-    "statements": [
+    "stringListStatements": [
       {
         "field": "type",
         "operator": "IN_LIST",
@@ -33,7 +33,7 @@
   },
   {
     "desc": "omnivore animals which are not tall",
-    "statements": [
+    "stringListStatements": [
       {
         "field": "type",
         "operator": "IN_LIST",

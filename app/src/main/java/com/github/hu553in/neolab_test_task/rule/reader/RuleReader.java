@@ -1,26 +1,27 @@
-package neolab_test_task.rule.reader;
+package com.github.hu553in.neolab_test_task.rule.reader;
+
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.hu553in.neolab_test_task.rule.Rule;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import neolab_test_task.rule.Rule;
-
 public class RuleReader {
-    private RuleReader() {}
+    private RuleReader() {
+    }
 
     public static List<Rule> read(final Path path) throws RuleReaderException {
         final var objectMapper = new ObjectMapper();
         try (final var reader = Files.newBufferedReader(path)) {
             return objectMapper.readValue(
-                reader,
-                new TypeReference<List<Rule>>() {}
+                    reader,
+                    new TypeReference<>() {
+                    }
             );
         } catch (JsonParseException e) {
             throw new RuleReaderException("Unable to parse rules", e);

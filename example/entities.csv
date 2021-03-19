@@ -1,0 +1,7 @@
+weight,height,type
+light,small,carnivore
+light,short,herbivore
+medium,tall,omnivore
+heavy,short,herbivore
+light,small,carnivore
+heavy,short,herbivore
