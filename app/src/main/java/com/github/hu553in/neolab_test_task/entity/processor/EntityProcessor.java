@@ -22,8 +22,9 @@ public class EntityProcessor {
                     final var fieldValue = entity.get(stringListStatement.getField());
                     if (fieldValue == null) {
                         throw new EntityProcessorException(
-                                "Rule contains statement with field name " +
-                                        "which is not presented in entity"
+                                "Unable to process entities: " +
+                                        "Rule contains statement with field " +
+                                        "which is not presented in entity name "
                         );
                     }
                     return stringListStatement.getOperator().run(
