@@ -1,19 +1,22 @@
 package com.github.hu553in.neolab_test_task.rule.operator;
 
+import com.github.hu553in.neolab_test_task.rule.operator.string_list.StringListOperator;
+import com.github.hu553in.neolab_test_task.rule.operator.string_list.StringListOperatorRunner;
+
 import java.util.EnumMap;
 import java.util.Map;
 
 public class OperatorMap {
-    private static final Map<Operator, OperatorRunner> operators;
+    private static final Map<StringListOperator, StringListOperatorRunner> stringListOperators;
 
     static {
-        operators = new EnumMap<>(Operator.class);
-        operators.put(
-                Operator.IN_LIST,
+        stringListOperators = new EnumMap<>(StringListOperator.class);
+        stringListOperators.put(
+                StringListOperator.IN_LIST,
                 (value, list) -> list.contains(value)
         );
-        operators.put(
-                Operator.NOT_IN_LIST,
+        stringListOperators.put(
+                StringListOperator.NOT_IN_LIST,
                 (value, list) -> !list.contains(value)
         );
     }
@@ -21,7 +24,7 @@ public class OperatorMap {
     private OperatorMap() {
     }
 
-    public static OperatorRunner getOperatorRunner(final String name) {
-        return operators.get(Operator.valueOf(name));
+    public static StringListOperatorRunner getStringListOperatorRunner(final String name) {
+        return stringListOperators.get(StringListOperator.valueOf(name));
     }
 }

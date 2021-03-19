@@ -3,7 +3,7 @@ package com.github.hu553in.neolab_test_task.rule.statement;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.github.hu553in.neolab_test_task.rule.operator.OperatorMap;
-import com.github.hu553in.neolab_test_task.rule.operator.OperatorRunner;
+import com.github.hu553in.neolab_test_task.rule.operator.string_list.StringListOperatorRunner;
 import lombok.Getter;
 
 import java.util.List;
@@ -13,7 +13,7 @@ public class StringListStatement {
     private final String field;
 
     @Getter
-    private final OperatorRunner operator;
+    private final StringListOperatorRunner operator;
 
     @Getter
     private final List<String> list;
@@ -26,6 +26,6 @@ public class StringListStatement {
     ) {
         this.field = field;
         this.list = list;
-        this.operator = OperatorMap.getOperatorRunner(operatorName);
+        this.operator = OperatorMap.getStringListOperatorRunner(operatorName);
     }
 }
