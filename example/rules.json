@@ -1,18 +1,23 @@
 [
   {
     "desc": "herbivore animals",
-    "stringListStatements": [
+    "stringStatements": [
       {
         "field": "type",
-        "operator": "IN_LIST",
-        "list": [
-          "herbivore"
-        ]
+        "operator": "EQUALS",
+        "string": "herbivore"
       }
     ]
   },
   {
     "desc": "herbivore or carnivore animals which are small",
+    "stringStatements": [
+      {
+        "field": "height",
+        "operator": "EQUALS",
+        "string": "small"
+      }
+    ],
     "stringListStatements": [
       {
         "field": "type",
@@ -21,32 +26,21 @@
           "herbivore",
           "carnivore"
         ]
-      },
-      {
-        "field": "height",
-        "operator": "IN_LIST",
-        "list": [
-          "small"
-        ]
       }
     ]
   },
   {
     "desc": "omnivore animals which are not tall",
-    "stringListStatements": [
+    "stringStatements": [
       {
         "field": "type",
-        "operator": "IN_LIST",
-        "list": [
-          "omnivore"
-        ]
+        "operator": "EQUALS",
+        "string": "omnivore"
       },
       {
         "field": "height",
-        "operator": "NOT_IN_LIST",
-        "list": [
-          "tall"
-        ]
+        "operator": "NOT_EQUALS",
+        "string": "tall"
       }
     ]
   }

@@ -1,4 +1,4 @@
-# Neolab test task
+# NEOLAB test task
 
 ## Description
 

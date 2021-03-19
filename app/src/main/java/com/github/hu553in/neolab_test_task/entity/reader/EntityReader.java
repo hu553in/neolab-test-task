@@ -24,7 +24,10 @@ public class EntityReader {
                 return result;
             }
         } catch (CsvValidationException e) {
-            throw new EntityReaderException("Unable to validate entity CSV", e);
+            throw new EntityReaderException(
+                    "Unable to validate entity CSV",
+                    e
+            );
         } catch (IOException e) {
             throw new EntityReaderException("Unable to read entities", e);
         }
