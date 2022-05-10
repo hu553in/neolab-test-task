@@ -2,8 +2,7 @@
 
 ## Description
 
-This project is the app for counting statistics on specified entities
-using specified rules.
+This project is the app for counting statistics on specified entities using specified rules.
 
 ## Input data (with example)
 
