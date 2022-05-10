@@ -14,4 +14,4 @@ You can see the example of such files in `./example` directory.
 1. Install OpenJDK (≥ 11)
 2. Run `./gradlew clean installShadowDist`
 3. Run `java -jar ./app/build/install/app-shadow/lib/app-all.jar <entities_path> <rules_path>`
-(you must replace `<entities_path>` and `<rules_path>` with paths to corresponding files)
+   (you must replace `<entities_path>` and `<rules_path>` with paths to corresponding files)
